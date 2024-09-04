@@ -1,0 +1,120 @@
+@font-face {
+  font-family: roboto;
+  src: url(../Roboto/Roboto-Regular.ttf);
+}
+:root {
+  margin: 0px;
+  padding: 0px;
+  font-size: 10px;
+  --light-grey: rgb(209, 209, 209);
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2rem;
+  font-family: roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.background {
+  height: 350px;
+  width: 190vw;
+  top: 0;
+  right: 0;
+  background-color: var(--light-grey);
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-15deg);
+  transform-origin: top right;
+}
+section:first-child {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.image-wrapper {
+  position: relative;
+}
+.full-name {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 50px;
+  font-size: 4rem;
+}
+.about-me {
+  padding: 8px;
+}
+.about-me h1 {
+  text-align: center;
+}
+.about-me svg {
+  height: 3rem;
+  margin-inline: 7px;
+}
+.contact-icons {
+  text-align: center;
+}
+section.mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 25px;
+}
+.project img {
+  min-width: 300px;
+}
+.project-icons {
+  width: 5rem;
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+.project-infos {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.project-infos-top {
+  display: flex;
+  padding-left: 8px;
+  margin-bottom: -25px;
+  gap: 30px;
+}
+.bottom {
+  background-color: var(--light-grey);
+}
+.bottom h1 {
+  text-align: center;
+}
+.contact-me {
+  padding: 15px;
+  padding-bottom: 0px;
+}
+ul {
+  list-style: none;
+}
+.bottom img {
+  width: 100vw;
+}
+section.bottom .contact-icons svg {
+  height: 3rem;
+  margin-inline: 7px;
+  margin: 10px;
+}
