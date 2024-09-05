@@ -27,6 +27,7 @@ body {
   transform: rotate(-15deg);
   transform-origin: top right;
 }
+
 section:first-child {
   display: flex;
 
@@ -35,6 +36,7 @@ section:first-child {
   margin-top: 10px;
   position: relative;
   overflow: hidden;
+  padding: 3rem;
 }
 .image-wrapper {
   position: relative;
@@ -65,12 +67,14 @@ section.mid {
   align-items: center;
   padding: 20px;
 }
-
+.about-me a {
+  margin-left: 7px;
+}
 .projects {
   display: grid;
   grid-template-columns: 300px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+  gap: 25px;
 }
 .project {
   display: flex;
@@ -81,11 +85,15 @@ section.mid {
 .project img {
   min-width: 300px;
 }
+a {
+  width: 50px;
+}
 .project-icons {
   width: 5rem;
   display: flex;
   gap: 5px;
   margin-left: auto;
+  align-items: center;
 }
 .project-infos {
   padding: 10px;
@@ -117,4 +125,74 @@ section.bottom .contact-icons svg {
   height: 3rem;
   margin-inline: 7px;
   margin: 10px;
+}
+
+@media (min-width: 700px) {
+  .about-me {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 75%;
+    min-height: 40dvh;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .about-me * {
+    margin-left: 210px;
+  }
+  .image-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+  }
+  .image-wrapper > .full-name {
+    top: 10px;
+    right: 0px;
+    transform: translateX(100%);
+    color: black;
+    font-style: italic;
+  }
+  .mid > h1 {
+    align-self: flex-start;
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+  }
+  .bottom > * {
+    flex: 1;
+  }
+  .bottom > img {
+    max-width: 60vw;
+  }
+}
+@media (min-width: 1100px) {
+  body {
+    font-size: calc(2rem + 0.2vw);
+  }
+  .projects {
+    width: 86%;
+  }
+  .about-me * {
+    margin-left: 220px;
+  }
+  .project .project-infos-top {
+    align-items: baseline;
+  }
+  .image-wrapper > img {
+    width: 350px;
+  }
+  .image-wrapper > .full-name {
+    bottom: 10px;
+    left: 20px;
+    font-style: italic;
+  }
+  .mid > h1 {
+    align-self: center;
+  }
+}
+@media (min-width: 1500px) {
+  body {
+    font-size: calc(2rem + 0.35vw);
+  }
 }
